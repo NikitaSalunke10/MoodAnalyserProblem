@@ -16,10 +16,10 @@ namespace TestProject1
         }
 
         [TestMethod]
-        [DataRow(null)]
-        public void GivenMoodHappyShouldReturnHappy(string message) // this method is for invalid mood like null value
+        public void GivenMoodHappyShouldReturnHappy() // this method is for invalid mood like null value
         {
             string expected = "HAPPY";
+            string message = null;
             MoodAnalyser moodAnalyser = new MoodAnalyser(message);
             string mood = moodAnalyser.AnalyseMood();
             Assert.AreEqual(expected, mood);
