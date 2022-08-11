@@ -10,6 +10,11 @@ namespace MoodAnalyserProblem
 {
     public class MoodAnalyserFactory
     {
+        private string message;
+        public MoodAnalyserFactory(string message)
+        {
+            this.message = message;
+        }
         public static object CreateMoodAnalyser(string className, string constructorName)
         {
             string pattern = @"." + constructorName + "$";
